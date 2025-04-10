@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Fundamentals Lab Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fonts for Arabic support -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo" data-translate="projectTitle">Web Fundamentals Lab Project</div>
+      <button id="language-toggle" class="language-toggle" data-translate="toggleLanguage">العربية</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Registration Page (First Interface) -->
+    <section id="registration-page" class="page">
+      <div class="form-container">
+        <h2 class="form-title" data-translate="registrationTitle">User Registration</h2>
+        
+        <form id="registration-form">
+          <div class="form-group">
+            <label for="fullname" data-translate="fullName">Full Name</label>
+            <input type="text" id="fullname" class="form-control" required>
+            <div class="error-message"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" data-translate="email">Email Address</label>
+            <input type="email" id="email" class="form-control" required>
+            <div class="error-message"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone" data-translate="phone">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" required>
+            <div class="error-message"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="password" data-translate="password">Password</label>
+            <input type="password" id="password" class="form-control" required>
+            <div class="error-message"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="confirm-password" data-translate="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirm-password" class="form-control" required>
+            <div class="error-message"></div>
+          </div>
+          
+          <div class="btn-group">
+            <button type="submit" id="register-btn" class="btn" data-translate="registerBtn">Register</button>
+            <button type="button" id="login-btn" class="btn" data-translate="loginBtn" disabled>Login</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Subject Selection Page (Second Interface) -->
+    <section id="subjects-page" class="page">
+      <div class="form-container">
+        <h2 class="form-title" data-translate="subjectsTitle">Choose Your Subjects</h2>
+        
+        <form id="subjects-form">
+          <button type="button" id="select-all-btn" class="btn" data-translate="selectAll">Select All</button>
+          
+          <div class="checkbox-container">
+            <div class="checkbox-item">
+              <input type="checkbox" id="web-development" name="subjects" value="web-development">
+              <label for="web-development" data-translate="webDevelopment">Web Development</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="programming" name="subjects" value="programming">
+              <label for="programming" data-translate="programming">Programming</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="data-science" name="subjects" value="data-science">
+              <label for="data-science" data-translate="dataScience">Data Science</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="artificial-intelligence" name="subjects" value="artificial-intelligence">
+              <label for="artificial-intelligence" data-translate="artificialIntelligence">Artificial Intelligence</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="cybersecurity" name="subjects" value="cybersecurity">
+              <label for="cybersecurity" data-translate="cybersecurity">Cybersecurity</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="networking" name="subjects" value="networking">
+              <label for="networking" data-translate="networking">Networking</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="database-management" name="subjects" value="database-management">
+              <label for="database-management" data-translate="databaseManagement">Database Management</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="mobile-app-development" name="subjects" value="mobile-app-development">
+              <label for="mobile-app-development" data-translate="mobileAppDevelopment">Mobile App Development</label>
+            </div>
+          </div>
+          
+          <div class="nav-buttons">
+            <button type="button" class="btn back-btn" data-target="registration-page" data-translate="backBtn">Back</button>
+            <button type="button" id="continue-btn" class="btn btn-success" data-translate="continueBtn">Continue</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <!-- About Me Page (Third Interface) -->
+    <section id="about-me-page" class="page">
+      <div class="about-me">
+        <div class="about-me-header">
+          <h2 data-translate="aboutMeTitle">About Me</h2>
+        </div>
+        
+        <div class="about-me-content">
+          <div class="info-section">
+            <h3 data-translate="personalInfo">Personal Information</h3>
+            <div class="info-item">
+              <span class="info-label" data-translate="name">Name:</span>
+              <span id="info-name">Taha AL kohlani</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label" data-translate="careerGoal">Career Goal:</span>
+              <span id="info-career-goal">Becoming a professional software engineer and digital entrepreneur</span>
+            </div>
+          </div>
+          
+          <div class="info-section">
+            <h3 data-translate="academicInfo">Academic Information</h3>
+            <div class="info-item">
+              <span class="info-label" data-translate="academicField">Academic Field:</span>
+              <span id="info-academic-field">Computer Science / Information Technology</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label" data-translate="university">University:</span>
+              <span id="info-university">Al Rasheed</span>
+            </div>
+          </div>
+          
+          <div class="info-section">
+            <h3 data-translate="skills">Skills</h3>
+            <div class="info-item">
+              <span class="info-label" data-translate="technicalSkills">Technical Skills:</span>
+              <span id="info-technical-skills">Python, CSS, JavaScript, ERPNext, Networking, IT Support</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label" data-translate="softSkills">Soft Skills:</span>
+              <span id="info-soft-skills">Leadership, Teamwork, Communication, Problem-Solving</span>
+            </div>
+          </div>
+          
+          <div class="info-section">
+            <h3 data-translate="languages">Languages</h3>
+            <div class="info-item">
+              <span class="info-label" data-translate="languagesSpoken">Languages:</span>
+              <span id="info-languages">Arabic (native), English (fluent), Turkish</span>
+            </div>
+          </div>
+          
+          <div class="info-section">
+            <h3 data-translate="contact">Contact Information</h3>
+            <div class="info-item">
+              <span class="info-label" data-translate="contactInfo">Contact:</span>
+              <span id="info-contact">taha.kohlani@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-buttons">
+          <button type="button" class="btn back-btn" data-target="subjects-page" data-translate="backBtn">Back</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Taha AL kohlani - Web Fundamentals Lab Project</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
